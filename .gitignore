@@ -16,6 +16,7 @@ firstcontract/dist/
 firstcontract/out/
 firstcontract/*.tsbuildinfo
 firstcontract/**/*.map
+firstcontract/package-lock.json
 
 # 日志与临时文件
 *.log
