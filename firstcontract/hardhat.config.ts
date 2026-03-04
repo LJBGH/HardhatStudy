@@ -1,5 +1,7 @@
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-verify"
+import "hardhat-gas-reporter";
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -16,7 +18,15 @@ const config: config = {
       url: `https://sepolia.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
       accounts: [process.env.ACCOUNT_TEST],
     }
-  }
+  },
+  gasReporter: {
+    enabled: true,
+    // currency: "USD",
+    // gasPrice: 21,
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
+  },
 };
 
 export default config;
