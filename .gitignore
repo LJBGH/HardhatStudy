@@ -1,0 +1,29 @@
+# ================================
+# 通用 Hardhat / Node.js 忽略配置（仓库根目录）
+# ================================
+
+# Hardhat 编译产物（任意子项目）
+artifacts/
+cache/
+coverage/
+typechain-types/
+
+# Node.js 依赖（任意子项目）
+node_modules/
+
+# TypeScript / 打包仅限制（firstcontract）
+firstcontract/dist/
+firstcontract/out/
+firstcontract/*.tsbuildinfo
+firstcontract/**/*.map
+
+# 日志与临时文件
+*.log
+*.tmp
+*.temp
+
+# 环境变量与私钥（如有）
+.env
+*.key
+*.pem
+
