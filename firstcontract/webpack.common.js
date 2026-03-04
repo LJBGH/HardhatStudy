@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config(); // 引入环境变量
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 

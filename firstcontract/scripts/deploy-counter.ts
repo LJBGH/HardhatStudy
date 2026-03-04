@@ -9,6 +9,8 @@ async function deployCounter(){
     const Counter = await ethers.getContractFactory("Counter"); // 获取Counter合约工厂
     const counter = await Counter.deploy(); // 部署Counter合约
     await counter.waitForDeployment(); // 等待部署完成
+
+    console.log("Counter deployed to:", await counter.getAddress()); // 打印合约地址
     
     const blockAfter = await provider.getBlockNumber();
     console.log("部署后区块号:", blockAfter);
