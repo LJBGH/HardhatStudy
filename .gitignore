@@ -10,13 +10,14 @@ typechain-types/
 
 # Node.js 依赖（任意子项目）
 node_modules/
+package-lock.json
 
 # TypeScript / 打包仅限制（firstcontract）
 firstcontract/dist/
 firstcontract/out/
 firstcontract/*.tsbuildinfo
 firstcontract/**/*.map
-/firstcontract/package-lock.json
+
 
 # 日志与临时文件
 *.log
