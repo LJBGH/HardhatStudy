@@ -1,0 +1,17 @@
+{
+  "name": "three-nodules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx esbuild index.js --bundle --outfile=bundle.js --platform=node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/wallet": "^5.8.0",
+    "esbuild": "^0.27.3",
+    "ethers": "^6.16.0"
+  }
+}
