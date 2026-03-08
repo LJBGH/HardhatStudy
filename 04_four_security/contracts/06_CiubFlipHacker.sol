@@ -10,6 +10,8 @@ contract CoinFlipHacker {
         coinFlip = CoinFlip(_coinFlip);
     }
 
+    // 通过攻击合约预先计算预测值，实现与目标合约值一致
+    
     // 通过模拟CoinFlip中的side计算逻辑，来调用flip
     function hack() public returns (bool) {
         uint256 _blockValue = uint256(blockhash(block.number - 1));

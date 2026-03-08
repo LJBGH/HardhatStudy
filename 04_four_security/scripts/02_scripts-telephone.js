@@ -1,4 +1,8 @@
 const { ethers } = require("hardhat");
+/*
+*  tx.origin 和 msg.sender攻击 （目标合约可能存在判断条件 tx.origin = msg.sender）
+实现方式：通过外部合约调用，使目标合约的 tx.origin = msg.sender 不成立
+*/
 
 // 攻击目标合约地址
 const telephoneAddress = "0x6f244242d3CB8353783Fc169cfC0e392CC99b37B";

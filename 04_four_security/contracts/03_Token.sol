@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
-
+/*
+* uint 溢出攻击
+实现方式：solidity8.0之前版本可使用uint溢出漏洞，使计算出的值发生变化，以盗取资金
+*/
 contract Token {
     mapping(address => uint256) balances;
     uint256 public totalSupply;

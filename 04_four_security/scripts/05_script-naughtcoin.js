@@ -1,7 +1,9 @@
 const { ethers } = require("hardhat");
 
-// 函数隐藏方式攻击
-
+/*
+* 函数隐藏方式攻击
+实现方式：通过检查目标合约所继承的父类合约，检查合约限制漏，盗取资金
+*/
 async function NaughtCoinScript() {
     // NaughtCoin合约地址
     const NaughtCoinAddress = "0x5bF011122185E328446d2A3718E056386Ea01676";

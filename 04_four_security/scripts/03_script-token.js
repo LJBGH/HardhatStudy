@@ -1,4 +1,8 @@
 const { ethers } = require("hardhat");
+/*
+* uint 溢出攻击
+实现方式：solidity8.0之前版本可使用uint溢出漏洞，使计算出的值发生变化，以盗取资金
+*/
 
 async function CallHacker() {
     const TokenAddress = "0x18B95Bec6b7E928d7A8E1B83d9ACAFF1F7A0D0e4";

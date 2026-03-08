@@ -1,4 +1,8 @@
 const { ethers } = require("hardhat");
+/*
+* 改变所有者攻击 （目标合约可能在reveive中实现改变owner操作）
+实现方式：通过reveive回调漏洞，改变目标合约owner
+*/
 
 // 合约地址
 const FallbackAddress = "0xFFc48Ad0463E4011a4274f4AfE483992D0463910";
