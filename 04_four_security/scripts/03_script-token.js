@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 /*
-* uint 溢出攻击
+* 通过算术溢出增加资产
 实现方式：solidity8.0之前版本可使用uint溢出漏洞，使计算出的值发生变化，以盗取资金
 */
 

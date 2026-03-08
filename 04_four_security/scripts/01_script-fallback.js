@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 /*
-* 改变所有者攻击 （目标合约可能在reveive中实现改变owner操作）
+* 利用转账机制控制合约 
 实现方式：通过reveive回调漏洞，改变目标合约owner
 */
 

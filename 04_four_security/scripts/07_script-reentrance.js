@@ -1,6 +1,7 @@
 const { ethers } = require("hardhat");
 /*
-  通过 低级调用call及receive漏洞实现重入攻击
+* 重入攻击提取资金
+实现方式： 通过低级调用call及receive漏洞实现重入攻击
 */
 
 // Reentrance合约地址

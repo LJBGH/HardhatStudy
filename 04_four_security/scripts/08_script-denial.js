@@ -1,6 +1,6 @@
 const { ethers } = require("hardhat");
 /*
-* 拒绝服务攻击
+* 使合约拒绝服
 实现方式：使用拒绝服务合约及receive, 通过耗尽gas费实现
 */
 

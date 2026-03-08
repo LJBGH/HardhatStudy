@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 
 /*
-* 函数隐藏方式攻击
+* 利用隐藏逻辑转移资产
 实现方式：通过检查目标合约所继承的父类合约，检查合约限制漏，盗取资金
 */
 async function NaughtCoinScript() {
