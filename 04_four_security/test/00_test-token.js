@@ -2,6 +2,7 @@ const { loadFixture } = require("@nomicfoundation/hardhat-toolbox/network-helper
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
+// loadFixture是hardhat-toolbox提供的一个测试工具，用于部署合约并返回合约实例和相关地址
 describe("MyToken contract", function () {
     async function deployMyTokenFixture() {
         // 获取一些地址
@@ -25,11 +26,15 @@ describe("MyToken contract", function () {
 
     it("测试转账", async function () {
         const { token, owner, addr1, addr2 } = await loadFixture(deployMyTokenFixture);
+
+        // 测试owner转账给addr1
         await expect(
             token.transfer(addr1.address, 100)
         ).to.changeTokenBalances(token, [owner, addr1], [-100, 100]);
 
+        // 测试addr1转账给addr2
         await expect(
+            // 使用connect方法连接到addr1，再发起转账
             token.connect(addr1).transfer(addr2.address, 50)
         ).to.changeTokenBalances(token, [addr1, addr2], [-50, 50]);
     })

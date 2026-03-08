@@ -25,11 +25,13 @@ const config: config = {
       accounts: [process.env.ACCOUNT_TEST],
     }
   },
+  //  gas报告
   gasReporter: {
     enabled: true,
     // currency: "USD",
     // gasPrice: 21,
   },
+  // 合约验证
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
